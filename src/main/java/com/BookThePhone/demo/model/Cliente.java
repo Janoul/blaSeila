@@ -16,7 +16,8 @@ public class Cliente {
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, orphanRemoval = true)
     private ArrayList<Conta> contas;
 
-    public Cliente () {}
+    public Cliente() {
+    }
 
     public Cliente(String nome, ArrayList<Conta> contas) {
         this.nome = nome;
@@ -44,3 +45,11 @@ public class Cliente {
 
     public ArrayList<Conta> getContas() {
 
+        return contas;
+    }
+
+    public void setContas(ArrayList<Conta> contas) {
+
+        this.contas = contas;
+    }
+}
